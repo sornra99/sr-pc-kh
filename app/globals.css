@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background: #060607;
+  color: #ffffff;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background:
+    radial-gradient(circle at 18% 12%, rgba(239, 27, 45, 0.22), transparent 28%),
+    radial-gradient(circle at 85% 10%, rgba(255, 255, 255, 0.08), transparent 18%),
+    linear-gradient(135deg, #060607 0%, #111114 46%, #070707 100%);
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  opacity: 0.14;
+  background-image:
+    linear-gradient(rgba(255,255,255,.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.08) 1px, transparent 1px);
+  background-size: 42px 42px;
+  mask-image: linear-gradient(to bottom, black, transparent 85%);
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8;
+  }
+
+  .glass-card {
+    @apply border border-white/10 bg-white/[0.04] shadow-2xl backdrop-blur-xl;
+  }
+
+  .section-title {
+    @apply text-3xl font-black tracking-tight text-white sm:text-4xl lg:text-5xl;
+  }
+
+  .section-kicker {
+    @apply mb-3 inline-flex rounded-full border border-red-500/30 bg-red-500/10 px-4 py-1 text-sm font-bold uppercase tracking-[0.28em] text-red-300;
+  }
+}
