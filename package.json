@@ -18,6 +18,7 @@
     "typescript": "^5.8.3"
   },
   "devDependencies": {
+    "@eslint/eslintrc": "^3.3.1",
     "autoprefixer": "^10.4.21",
     "eslint": "^9.31.0",
     "eslint-config-next": "15.4.1",
